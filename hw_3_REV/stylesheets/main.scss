@@ -1,0 +1,70 @@
+@import 'colors';
+@import 'button';
+@import 'typography';
+@import 'bourbon/bourbon';
+
+
+body             { margin: 40px;}
+
+
+#line-space      { margin: 32px 0;}
+
+#line-space-b    { margin: 46px 0;}
+
+.swatch      {
+
+	display: block; width: 40px; height: 40px;
+
+	&.red  { background-color: $red; border: 1pt solid $red;}
+
+	&.pink { background-color: $pink;border: 1pt solid $pink;}
+
+	&.blue { background-color: $blue;border: 1pt solid $blue;}
+
+	&.bk   { background-color: #000; display: inline-block; border: 1pt solid;}
+
+	&.wt   { background-color: #FFF; display: inline-block; border: 1pt solid;}
+
+}
+
+#line-example {
+			border-bottom: 1pt dotted $red; 
+			margin: 40px 0 0 0;
+		}
+
+.button {
+    display: inline-block;
+    height: 40px;
+    width: 160px;
+    border: 1px solid $red;
+}
+
+
+a.button { 
+
+	@extend %button;
+
+	&.read-on {color: $pink; background: #FFF;}
+	&.sign-up {color: #FFF; background-color: $pink;}
+
+		&:hover {
+		background-color:  tint($blue, 50%);
+		} 
+		&:active {
+		background-color:  tint($blue, 75%);
+		} 
+		&:visited{ color: $blue;}
+
+}
+
+@for $number from 1 through 12 {
+.cell-#{$number} { width: 78px * $number; }
+}
+
+.row .cell-1 { 
+	display 		 : inline-block;
+	background-color : lightgray;
+	height           : 200px;
+	border: 1pt solid #FFF;
+}
+
