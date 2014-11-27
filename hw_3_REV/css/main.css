@@ -8,6 +8,59 @@ a.button {
   line-height: 40px;
   text-decoration: none; }
 
+.button {
+  display: inline-block;
+  height: 40px;
+  width: 160px;
+  border: 1px solid #FF1D25; }
+
+a.button.read-on {
+  color: #FF7BAC;
+  background: #FFF; }
+a.button.sign-up {
+  color: #FFF;
+  background-color: #FF7BAC; }
+a.button:hover {
+  background-color: tint(#3FA9F5, 50%); }
+a.button:active {
+  background-color: tint(#3FA9F5, 75%); }
+a.button:visited {
+  color: #3FA9F5; }
+
+.fa {
+  padding: 20px; }
+
+.fa-user, .fa-bars, .fa-facebook, .fa-twitter, .fa-camera-retro, .fa-pinterest {
+  color: #3FA9F5; }
+  .fa-user:hover, .fa-bars:hover, .fa-facebook:hover, .fa-twitter:hover, .fa-camera-retro:hover, .fa-pinterest:hover {
+    color: #FFF;
+    background: #3FA9F5; }
+  .fa-user:active, .fa-bars:active, .fa-facebook:active, .fa-twitter:active, .fa-camera-retro:active, .fa-pinterest:active {
+    color: lightgray; }
+
+.fa-heart, .fa-home {
+  color: #FF7BAC; }
+  .fa-heart:hover, .fa-home:hover {
+    color: #FFF;
+    background: #FF7BAC; }
+  .fa-heart:active, .fa-home:active {
+    color: lightgray; }
+
+.fa-chevron-circle-up {
+  color: #3FA9F5; }
+  .fa-chevron-circle-up:hover {
+    color: #FF7BAC; }
+  .fa-chevron-circle-up:active {
+    color: lightgray; }
+
+.fa-chevron-circle-down {
+  color: #FF7BAC; }
+  .fa-chevron-circle-down:hover {
+    color: #3FA9F5; }
+  .fa-chevron-circle-down:active {
+    color: lightgray; }
+
+/* .fa-home {font-size: 150%;} */
 @font-face {
   font-family: "DIN_Alternate_Bold";
   src: url("fonts/DIN_Alternate_Bold.ttf");
@@ -68,14 +121,36 @@ h4 span {
   font-size: 30px;
   letter-spacing: 1px; }
 
+ul a {
+  text-decoration: none;
+  color: #FFF;
+  weight: lighter;
+  font-size: 17pt;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style: none; }
+
+li {
+  padding: 16px 30px 8px 27px;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  width: 152px;
+  text-align: center; }
+
+ul.site-map {
+  padding-left: 0; }
+
 body {
   margin: 40px; }
 
 #line-space {
-  margin: 32px 0; }
+  margin: 32px 0;
+  clear: both; }
 
 #line-space-b {
-  margin: 46px 0; }
+  margin: 46px 0;
+  clear: both; }
 
 .swatch {
   display: block;
@@ -102,25 +177,6 @@ body {
 #line-example {
   border-bottom: 1pt dotted #FF1D25;
   margin: 40px 0 0 0; }
-
-.button {
-  display: inline-block;
-  height: 40px;
-  width: 160px;
-  border: 1px solid #FF1D25; }
-
-a.button.read-on {
-  color: #FF7BAC;
-  background: #FFF; }
-a.button.sign-up {
-  color: #FFF;
-  background-color: #FF7BAC; }
-a.button:hover {
-  background-color: #9fd4fa; }
-a.button:active {
-  background-color: #cfe9fc; }
-a.button:visited {
-  color: #3FA9F5; }
 
 .cell-1 {
   width: 78px; }
@@ -163,3 +219,38 @@ a.button:visited {
   background-color: lightgray;
   height: 200px;
   border: 1pt solid #FFF; }
+
+#site-map {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/button-group_bg.png");
+  width: 848px;
+  height: 117px;
+  background-repeat: no-repeat; }
+
+.search {
+  position: relative; }
+
+.search input {
+  border: 1pt solid #FF1D25;
+  text-indent: 30px;
+  width: 266px;
+  height: 29px;
+  font-size: 10pt;
+  letter-spacing: 1px; }
+
+.search .fa-search {
+  position: absolute;
+  top: -11px;
+  left: -7px;
+  font-size: 15px;
+  color: gray; }
+
+.signup input {
+  border: 1pt solid #FF7BAC;
+  text-indent: 15px;
+  width: 266px;
+  height: 29px;
+  font-size: 10pt;
+  letter-spacing: 1px;
+  margin-bottom: 3px; }

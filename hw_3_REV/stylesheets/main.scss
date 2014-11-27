@@ -7,9 +7,9 @@
 body             { margin: 40px;}
 
 
-#line-space      { margin: 32px 0;}
+#line-space      { margin: 32px 0; clear: both;}
 
-#line-space-b    { margin: 46px 0;}
+#line-space-b    { margin: 46px 0; clear: both;}
 
 .swatch      {
 
@@ -32,39 +32,45 @@ body             { margin: 40px;}
 			margin: 40px 0 0 0;
 		}
 
-.button {
-    display: inline-block;
-    height: 40px;
-    width: 160px;
-    border: 1px solid $red;
-}
-
-
-a.button { 
-
-	@extend %button;
-
-	&.read-on {color: $pink; background: #FFF;}
-	&.sign-up {color: #FFF; background-color: $pink;}
-
-		&:hover {
-		background-color:  tint($blue, 50%);
-		} 
-		&:active {
-		background-color:  tint($blue, 75%);
-		} 
-		&:visited{ color: $blue;}
-
-}
 
 @for $number from 1 through 12 {
 .cell-#{$number} { width: 78px * $number; }
 }
 
 .row .cell-1 { 
-	display 		 : inline-block;
+	display		 : inline-block;
 	background-color : lightgray;
 	height           : 200px;
 	border: 1pt solid #FFF;
 }
+
+#site-map{ margin: 0;padding:0;
+	background-image: url('../images/button-group_bg.png');
+	width:848px; height: 117px; background-repeat: no-repeat; 
+
+	
+	}
+
+.search {position: relative;}
+
+.search input { border: 1pt solid $red;
+	text-indent: 30px; 
+	width: 266px; 
+	height: 29px; 
+	font-size: 10pt; letter-spacing: 1px;
+	}
+.search .fa-search { 
+  position: absolute;
+  top: -11px;
+  left: -7px;
+  font-size: 15px; color: gray; 
+}
+
+
+.signup input { border: 1pt solid $pink;
+	text-indent: 15px; 
+	width: 266px; 
+	height: 29px; 
+	font-size: 10pt; letter-spacing: 1px; margin-bottom: 3px;
+	}
 

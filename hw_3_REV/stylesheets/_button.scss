@@ -8,9 +8,88 @@
 
 	text-decoration: none;
 	
+}
 
-	
+.button {
+    display: inline-block;
+    height: 40px;
+    width: 160px;
+    border: 1px solid $red;
+}
+
+
+a.button { 
+
+	@extend %button;
+
+	&.read-on {color: $pink; background: #FFF;}
+	&.sign-up {color: #FFF; background-color: $pink;}
+
+		&:hover {
+		background-color:  tint($blue, 50%);
+		} 
+		&:active {
+		background-color:  tint($blue, 75%);
+		} 
+		&:visited{ color: $blue;}
+
+}
+
+.fa { 
+
+	padding:20px;
+
 }
 
 
 
+.fa-user, .fa-bars, .fa-facebook, .fa-twitter, .fa-camera-retro, .fa-pinterest {
+
+	color: $blue;
+	
+	&:hover {
+		color:  #FFF; background:$blue;
+		} 
+
+	&:active {
+		color:  lightgray;
+		} 
+	}
+
+
+.fa-heart, .fa-home, {
+
+	color: $pink;
+	
+	&:hover {
+		color:  #FFF; background:$pink;
+		} 
+
+	&:active {
+		color:  lightgray;
+		} 
+	}
+
+.fa-chevron-circle-up {
+
+	color: $blue;
+	
+	&:hover {
+		color:  $pink;
+		} 
+	&:active {
+		color:  lightgray;
+		} 
+}
+.fa-chevron-circle-down  {
+	color: $pink;
+	
+	&:hover {
+		color:  $blue;
+		} 
+	&:active {
+		color:  lightgray;
+		} 
+	}
+
+/* .fa-home {font-size: 150%;} */
